@@ -4,6 +4,7 @@
 ![alt text](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg "Built with Gramma's recipe")
 
 A Todo List app made with React JS (Front End, on Netlify) and Express JS (Back End, on Heroku).
+You can find the API (Back End) here : https://github.com/stevenpersia/todo-list-api
 
 ---
 
