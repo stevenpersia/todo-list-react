@@ -1,4 +1,4 @@
-# Toddo List App
+# Todo List App
 ![alt text](https://forthebadge.com/images/badges/made-with-javascript.svg "Made with JavaScript")
 ![alt text](https://forthebadge.com/images/badges/certified-elijah-wood.svg "Certified by Elijah Wood")
 ![alt text](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg "Built with Gramma's recipe")
