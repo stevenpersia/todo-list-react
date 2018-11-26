@@ -10,13 +10,13 @@ class App extends Component {
 	/* Add new task */
 	onSubmit = e => {
 		axios
-			.post('http://localhost:3000/create', {
+			.post('https://todolist-react-api.herokuapp.com/create', {
 				title: this.state.title,
 				done: false
 			})
 			.then(response => {
 				axios
-					.get('http://localhost:3000/')
+					.get('https://todolist-react-api.herokuapp.com/')
 					.then(response => {
 						this.setState({
 							tasks: response.data
@@ -35,12 +35,12 @@ class App extends Component {
 	/* Update task (done/undone) */
 	updateStatusTask = task => {
 		axios
-			.post('http://localhost:3000/update', {
+			.post('https://todolist-react-api.herokuapp.com/update', {
 				_id: task._id
 			})
 			.then(response => {
 				axios
-					.get('http://localhost:3000/')
+					.get('https://todolist-react-api.herokuapp.com/')
 					.then(response => {
 						this.setState({
 							tasks: response.data
@@ -58,7 +58,7 @@ class App extends Component {
 	/* Delete task */
 	deleteTask = task => {
 		axios
-			.post('http://localhost:3000/delete', {
+			.post('https://todolist-react-api.herokuapp.com/delete', {
 				_id: task._id
 			})
 			.then(response => {
@@ -142,7 +142,7 @@ class App extends Component {
 
 	componentDidMount() {
 		axios
-			.get('http://localhost:3000/')
+			.get('https://todolist-react-api.herokuapp.com/')
 			.then(response => {
 				this.setState({
 					tasks: response.data
