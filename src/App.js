@@ -115,15 +115,25 @@ class App extends Component {
 		return (
 			<div className="container">
 				<h1>TODO LIST</h1>
+				{/* SEARCH FEATURE NOT ADD FOR NOW BUT STYLING IS DONE
+				<form onSubmit="" className="search">
+					<input
+						name="search"
+						onChange={this.handleInputChange}
+						placeholder="Rechercher une tâche"
+					/>
+					<button>Rechercher</button>
+				</form>
+				 */}
 				<div className="tasks-list">
 					<ul>{this.renderTasks()}</ul>
-					<form onSubmit={this.onSubmit}>
+					<form onSubmit={this.onSubmit} className="add-task">
 						<input
 							name="title"
 							onChange={this.handleInputChange}
 							placeholder="Nom de la tâche"
 						/>
-						<button>Ajouter un tâche</button>
+						<button>Ajouter</button>
 					</form>
 				</div>
 			</div>
