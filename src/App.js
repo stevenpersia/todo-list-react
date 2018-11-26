@@ -7,15 +7,69 @@ class App extends Component {
 		tasks: []
 	};
 
+	/* Add new task */
+	onSubmit = e => {
+		axios
+			.post('http://localhost:3000/create', {
+				title: this.state.title,
+				done: false
+			})
+			.then(response => {})
+			.catch(err => {
+				console.log(err);
+			});
+		e.preventDefault();
+	};
+
+	/* Update task (done/undone) */
+	updateStatusTask = task => {
+		axios
+			.post('http://localhost:3000/update', {
+				_id: task._id
+			})
+			.then(response => {})
+			.catch(err => {
+				console.log(err);
+			});
+	};
+
+	/* Delete task */
+	deleteTask = task => {
+		axios
+			.post('http://localhost:3000/delete', {
+				_id: task._id
+			})
+			.then(response => {
+				const newStateTasks = [...this.state.tasks];
+				newStateTasks.splice(newStateTasks.indexOf(task), 1);
+				this.setState({
+					tasks: newStateTasks
+				});
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	};
+
 	/* Render all tasks */
 	renderTasks = () => {
 		const { tasks } = this.state;
 		const results = tasks.map(task => (
 			<li key={task._id} className="task">
-				<span className="delete">
+				<span
+					className="delete"
+					onClick={() => {
+						this.deleteTask(task);
+					}}
+				>
 					<i className="fas fa-times" />
 				</span>
-				<span className="title-task" onClick={this.handleUpdate} id={task._id}>
+				<span
+					className="title-task"
+					onClick={() => {
+						this.updateStatusTask(task);
+					}}
+				>
 					{task.title}
 				</span>
 			</li>
@@ -32,38 +86,6 @@ class App extends Component {
 		this.setState({
 			[name]: value
 		});
-	};
-
-	/* Add new task */
-	onSubmit = e => {
-		axios
-			.post('http://localhost:3000/create', {
-				title: this.state.title,
-				done: false
-			})
-			.then(response => {
-				const newStateTasks = [...this.state.tasks];
-				this.setState({
-					tasks: newStateTasks
-				});
-			})
-			.catch(err => {
-				console.log(err);
-			});
-		e.preventDefault();
-	};
-
-	/* Update a task (done/undone) */
-	handleUpdate = e => {
-		axios
-			.post('http://localhost:3000/update', {
-				done: true
-			})
-			.then(response => {})
-			.catch(err => {
-				console.log(err);
-			});
-		e.preventDefault();
 	};
 
 	render() {
