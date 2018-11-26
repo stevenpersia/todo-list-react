@@ -4,7 +4,7 @@
 ![alt text](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg "Built with Gramma's recipe")
 
 A Todo List app made with React JS (Front End) and Express JS (Back End). I've used Express, Body Parser and Mongoose packages.
-You can find the app (Back End) here : https://github.com/stevenpersia/todo-list-api
+You can find the app (Back End) here : https://github.com/stevenpersia/todo-list-api.
 Be careful, Back End is running on Heroku (dyno sleep mode)
 
 ---
