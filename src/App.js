@@ -14,7 +14,18 @@ class App extends Component {
 				title: this.state.title,
 				done: false
 			})
-			.then(response => {})
+			.then(response => {
+				axios
+					.get('http://localhost:3000/')
+					.then(response => {
+						this.setState({
+							tasks: response.data
+						});
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			})
 			.catch(err => {
 				console.log(err);
 			});
@@ -27,7 +38,18 @@ class App extends Component {
 			.post('http://localhost:3000/update', {
 				_id: task._id
 			})
-			.then(response => {})
+			.then(response => {
+				axios
+					.get('http://localhost:3000/')
+					.then(response => {
+						this.setState({
+							tasks: response.data
+						});
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			})
 			.catch(err => {
 				console.log(err);
 			});
@@ -55,22 +77,23 @@ class App extends Component {
 	renderTasks = () => {
 		const { tasks } = this.state;
 		const results = tasks.map(task => (
-			<li key={task._id} className="task">
+			<li key={task._id} className={task.done === true ? 'task' : ''}>
+				<span className="title-task">{task.title}</span>
 				<span
 					className="delete"
 					onClick={() => {
 						this.deleteTask(task);
 					}}
 				>
-					<i className="fas fa-times" />
+					<i className="fas fa-trash" />
 				</span>
 				<span
-					className="title-task"
+					className="done"
 					onClick={() => {
 						this.updateStatusTask(task);
 					}}
 				>
-					{task.title}
+					<i className="fas fa-check" />
 				</span>
 			</li>
 		));
@@ -90,17 +113,19 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="tasks-list">
+			<div className="container">
 				<h1>TODO LIST</h1>
-				<ul>{this.renderTasks()}</ul>
-				<form onSubmit={this.onSubmit}>
-					<input
-						name="title"
-						onChange={this.handleInputChange}
-						placeholder="Nom de la tâche"
-					/>
-					<button>Ajouter un tâche</button>
-				</form>
+				<div className="tasks-list">
+					<ul>{this.renderTasks()}</ul>
+					<form onSubmit={this.onSubmit}>
+						<input
+							name="title"
+							onChange={this.handleInputChange}
+							placeholder="Nom de la tâche"
+						/>
+						<button>Ajouter un tâche</button>
+					</form>
+				</div>
 			</div>
 		);
 	}
