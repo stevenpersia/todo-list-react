@@ -1,39 +1,18 @@
 # Todo List App
-![alt text](https://forthebadge.com/images/badges/made-with-javascript.svg "Made with JavaScript")
-![alt text](https://forthebadge.com/images/badges/certified-elijah-wood.svg "Certified by Elijah Wood")
-![alt text](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg "Built with Gramma's recipe")
+
+![](https://img.shields.io/github/last-commit/stevenpersia/todo-list-react.svg?style=for-the-badge)
+![](https://img.shields.io/snyk/vulnerabilities/github/stevenpersia/todo-list-react.svg?style=for-the-badge)
+![](https://img.shields.io/codeclimate/maintainability/stevenpersia/todo-list-react.svg?style=for-the-badge)
+![](https://img.shields.io/github/license/stevenpersia/todo-list-react.svg?style=for-the-badge)
+![](https://img.shields.io/badge/You%20like%20%3F-star%20me-blue.svg?style=for-the-badge)
 
 A Todo List app made with React JS (Front End) and Express JS (Back End). I've used Express, Body Parser and Mongoose packages.
 You can find the app (Back End) here : https://github.com/stevenpersia/todo-list-api.
 Be careful, Back End is running on Heroku (dyno sleep mode).
 
+![](https://github.com/stevenpersia/todo-list-react/blob/master/src/img/preview-todolist.png)
+
 ---
 
 ## Demo
 See demo : https://mytodolist-react.netlify.com/
-
----
-
-## License
-
-> MIT License
-> 
-> Copyright (c) 2018 Steven Persia
-> 
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-> of this software and associated documentation files (the "Software"), to deal
-> in the Software without restriction, including without limitation the rights
-> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-> copies of the Software, and to permit persons to whom the Software is
-> furnished to do so, subject to the following conditions:
-> 
-> The above copyright notice and this permission notice shall be included in all
-> copies or substantial portions of the Software.
-> 
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-> SOFTWARE.
