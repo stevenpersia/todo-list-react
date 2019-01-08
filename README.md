@@ -10,7 +10,7 @@ A Todo List app made with React JS (Front End) and Express JS (Back End). I've u
 You can find the app (Back End) here : https://github.com/stevenpersia/todo-list-api.
 Be careful, Back End is running on Heroku (dyno sleep mode).
 
-![](https://github.com/stevenpersia/todo-list-react/blob/master/src/img/preview-todolist.png)
+[![](https://github.com/stevenpersia/todo-list-react/blob/master/src/img/preview-todolist.png)](https://mytodolist-react.netlify.com/)
 
 ---
 
