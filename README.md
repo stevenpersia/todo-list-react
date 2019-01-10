@@ -15,4 +15,11 @@ Be careful, Back End is running on Heroku (dyno sleep mode).
 ---
 
 ## Demo
+
 See demo : https://mytodolist-react.netlify.com/
+
+## Features
+
+- Add new task feature
+- Check task feature
+- Delete task feature
